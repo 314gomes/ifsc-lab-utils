@@ -1,0 +1,114 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage{indentfirst}
+\usepackage{amsmath}
+\usepackage{multicol}
+
+
+\title{Relatório\\
+Laboratório de Físsica II\\
+Prática 1: Rotações de corpos rígidos e conservação do momento angular}
+
+\author{Felipe Barbetti de Grabalos\\
+\texttt{nro usp felipe}
+\and
+João Pedro Gomes\\
+\texttt{13839069}
+\and
+Maria Victoria Barreto Teixeira\\
+\texttt{nro usp mavi}
+}
+\date{Setembro 2022}
+
+\begin{document}
+\maketitle
+
+\section{Objetivos}
+    Esta prática visa estudar conceitos de rotação de corpos rígidos, a fim de comprovar empiricamente conceitos já vistos em sala de aula. Destacam-se a comprovação do momento de inércia e a análise da conservação do momento angular na colisão rotacional plástica.
+
+\section{Hipóteses}
+    Definimos que um corpo é rígido quando é indeformável, isto é, a distância entre quaisquer duas partículas do corpo permanece constante. Objetos reais não são perfeitamente rígidos, mas deformações em certas condições são negligenciáveis.
+    \par
+    Definimos que um corpo está rodando em torno de um eixo fixo quando a alteração angular de cada partícula é descrita em função do tempo. Define-se então $r$ como o raio da partícula em relação ao eixo, $s$ como o espaço percorrido na trajetória, $\theta$ como a posição angular (em radianos) de uma partícula em relação a uma origem, $\omega$ como a velocidade angular e $\alpha$ como aceleração angular, onde
+    \begin{equation}
+        \label{posang}
+        \theta = \frac{s}{r}
+    \end{equation}
+    \begin{equation}
+        \label{velang}
+        \omega = \frac{d}{dt}\theta
+    \end{equation}
+    \begin{equation}
+        \label{acang}
+        \alpha = \frac{d}{dt}\omega
+    \end{equation}
+    \par
+    Entretanto, essas equações não são suficientes para modelar diversas situações. Para descrever a energia de um corpo em rotação, por exemplo, é preciso considerar a velocidade tangencial de cada uma de suas partículas. A energia cinética $K$ pode então ser descrita com o somatório $K = \sum \frac{1}{2} m_iv_i^2$. Porém, substituindo \eqref{posang} em \eqref{velang} e isolando $v$ pode-se obter o novo somatório $K = \sum \frac{1}{2} m_i(\omega r_i) = \frac{1}{2} (\sum m_i r_i^2) \omega^2$.
+    \par
+    Define-se então o momento de inércia de um corpo como o somatório $\sum m_i r_i^2$, que pode ser substituído pela integral \eqref{mominerc} para corpos contínuos.
+    \begin{equation}
+        \label{mominerc}
+        I=\int r^2\, dm
+    \end{equation}
+    \par
+    Desta forma, a expressão para energia cinética rotacional passa a ser \eqref{krot}.
+    \begin{equation}
+        \label{krot}
+        K_\textbf{rot} = \frac{1}{2} I \omega
+    \end{equation}
+    \par
+    Isto forma nossas duas primeiras hipóteses:
+    \begin{description}
+        \item[Momento de inércia]{Faz sentido descrever o momento de inércia de um corpo com a equação \eqref{mominerc} e essa grandeza pode ser calculada de diferentes formas.}
+        \item[Energia cinética rotacional]{A energia cinética rotacional de um corpo é descrita por \eqref{krot}}.
+    \end{description}
+    \par
+    Outra grandeza de grande auxílio no estudo de rotações é o momento angular $\ell$ descrito por $\ell = r \times p = m(r \times v)$ onde $p$ é o momentum de uma partícula e $v$ sua velocidade tangencial.
+    \par
+    No caso de corpos contínuos, utiliza-se uma dedução similar a \eqref{krot} para definir seu momento angular \eqref{momang}.
+    \begin{equation}
+        \label{momang}
+        L = I\omega
+    \end{equation}
+    \par
+    Por si mesmo, o momento angular não é muito útil já que é uma grandeza axiomática. Entretanto, pode ser demonstrado que essa definição implica em \eqref{2leiang}, onde $\sum\tau$ é o torque total no corpo. 
+    \begin{equation}
+        \label{2leiang}
+        \sum\tau = \frac{dL}{dt}
+    \end{equation}
+    \par
+    Disso, surge nossa terceira hipótese:
+    \begin{description}
+        \item[Conservação do momento angular]{Num sistema com torque total nulo, o momento angular se conserva.}
+    \end{description}
+
+\section{Materiais}
+    \begin{enumerate}
+        \item{}
+    \end{enumerate}
+
+\section{Métodos}
+    medir as coisas com régua e aferir as hipóteses
+
+\section{Fontes de erros}
+
+\section{Resultados}
+    resultados comprovam que $b=a^x$
+
+\section{Discussão}
+    matemática faz sentido
+
+%---------------------%
+%REFERÊNCIAS
+%---------------------%
+\pagebreak
+\bibliographystyle{abntex2-num.bst}
+\bibliography{bibliografia}
+
+\nocite{apostilai}
+\nocite{apostilaii}
+\nocite{nussenzveig2013curso}
+\nocite{halliday2013fundamentals}
+
+\end{document}
